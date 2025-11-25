@@ -295,3 +295,50 @@ button:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
+
+/* === FAQ Section === */
+.faq-section {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: right;
+    padding: 15px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    color: var(--main-color);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.faq-answer p {
+    padding: 0 15px 15px;
+    font-size: 16px;
+    color: #555;
+}
+
