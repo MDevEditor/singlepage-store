@@ -20,3 +20,17 @@ window.addEventListener("scroll", () => {
     }
 });
 
+const elements = document.querySelectorAll(".fade-section");
+
+const reveal = () => {
+    const trigger = window.innerHeight * 0.8;
+    elements.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) el.classList.add("visible");
+    });
+};
+
+window.addEventListener("scroll", reveal);
+reveal();
+
+
