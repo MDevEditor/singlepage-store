@@ -357,5 +357,120 @@ header.scrolled {
     background: rgba(0, 0, 0, 0.85);
     padding: 10px 0;
 }
+/* HERO Modern */
+.hero {
+    background: linear-gradient(120deg, #111, #000);
+    padding: 120px 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+    color: #fff;
+    animation: fadeInUp 1s ease forwards;
+    backdrop-filter: blur(10px);
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ffd700, #fff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    margin-top: 12px;
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+.hero .btn {
+    margin-top: 25px;
+    padding: 12px 28px;
+    font-size: 17px;
+    font-weight: 600;
+    background: #ffd700;
+    color: #000;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #f1c600;
+    transform: translateY(-3px);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* PRODUCT CARD - 3D Hover */
+.product-card {
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+}
+
+.product-card img {
+    border-radius: 12px;
+}
+
+.product-card h3 {
+    color: #ffd700;
+}
+/* FAQ */
+.faq-item {
+    background: #111;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.faq-item.active {
+    border-color: #ffd700;
+}
+
+.faq-item p {
+    margin-top: 10px;
+    display: none;
+}
+
+.faq-item.active p {
+    display: block;
+    animation: fade 0.35s ease;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.fade-section {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.6s ease;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .hero h1 { font-size: 32px; }
+    .product-list { grid-template-columns: 1fr; }
+    header nav ul { gap: 12px; }
+    .hero { margin: 10px; padding: 80px 15px; }
+}
+
 
 
