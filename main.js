@@ -1,36 +1,11 @@
-const faqQuestions = document.querySelectorAll(".faq-question");
+// FAQ accordion
+const items = document.querySelectorAll(".faq-item");
 
-faqQuestions.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const answer = btn.nextElementSibling;
+items.forEach(item => {
+    item.addEventListener("click", () => {
+        item.classList.toggle("active");
 
-        if (answer.style.maxHeight) {
-            answer.style.maxHeight = null;
-        } else {
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        }
+        let ans = item.querySelector(".faq-answer");
+        ans.style.display = ans.style.display === "block" ? "none" : "block";
     });
 });
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    if (window.scrollY > 40) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
-
-const elements = document.querySelectorAll(".fade-section");
-
-const reveal = () => {
-    const trigger = window.innerHeight * 0.8;
-    elements.forEach((el) => {
-        const top = el.getBoundingClientRect().top;
-        if (top < trigger) el.classList.add("visible");
-    });
-};
-
-window.addEventListener("scroll", reveal);
-reveal();
-
-
