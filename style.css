@@ -1,476 +1,118 @@
-html {
-    scroll-behavior: smooth;
-}
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap");
 
 :root {
-    --primary: #ffb300;
-    --primary-hover: #ff9900;
-    --dark: #1d1d1d;
-    --light-bg: #f8f8f8;
+    --pink: #ff4fa7;
+    --yellow: #ffba00;
+    --bg: #fff7fc;
 }
 
-/* تنظیمات پایه */
 body {
-    margin: 0;
-    padding: 0;
     font-family: "Vazirmatn", sans-serif;
-    direction: rtl;
-    background-color: #f8f8f8;
+    margin: 0;
+    background: var(--bg);
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav a {
-    color: #fff;
-    margin-left: 15px;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-#hero {
-    padding: 80px 20px;
-    text-align: center;
-    background: #ffe4b5;
-}
-
-#products, #features, #contact {
-    padding: 40px 20px;
-    background: white;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.product {
-    background: #eee;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-}
-
-footer {
-    background: var(--dark);
-    color: #fff;
-    padding: 25px;
-    text-align: center;
-    margin-top: 40px;
-    border-radius: 15px 15px 0 0;
-    font-size: 14px;
-}
-
-/* هدر شیک */
-header {
-    background: #1d1d1d;
-    color: #fff;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+/* Header */
+.header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    background: rgba(255, 79, 167, 0.85);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* عنوان فروشگاه */
-header h1 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 700;
-}
-
-/* منو */
-header nav a {
+.header nav a {
     color: #fff;
     margin-left: 20px;
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-/* افکت زیبای هاور */
-header nav a:hover {
-    color: #ffd479;
-    text-decoration: underline;
-}
-
-#hero {
-    padding: 100px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #ffe4b5, #ffcf91);
-    border-radius: 0 0 20px 20px;
-}
-
-#hero h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-#hero p {
-    font-size: 18px;
-    color: #444;
-}
-
-/* بخش محصولات */
-#products {
-    padding: 50px 20px;
-    background: #ffffff;
-    margin: 30px auto;
-    border-radius: 12px;
-    max-width: 900px;
-}
-
-/* عنوان بخش */
-#products h2 {
-    font-size: 26px;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-/* لیست محصولات (گرید) */
-#products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-}
-
-/* کارت محصول */
-.product {
-    background: #fafafa;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    font-size: 16px;
-    border: 1px solid #eee;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-/* افکت هاور کارت */
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-    background: #fff7e6;
-    border-color: #ffd479;
-}
-
-#features {
-    padding: 40px 20px;
-    background: #ffffff;
-    margin: 30px auto;
-    border-radius: 12px;
-    max-width: 900px;
-}
-
-#features h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#features ul {
-    list-style: none;
-    padding: 0;
-}
-
-#features li {
-    background: #f5f5f5;
-    padding: 12px 15px;
-    border-radius: 8px;
-    margin: 10px 0;
-    border: 1px solid #eee;
-}
-
-/* عکس محصول */
-.product img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-/* عنوان محصول */
-.product h3 {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-/* توضیحات محصول */
-.product p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* دکمه خرید */
-.product button {
-    background: #ffb300;
-    color: #000;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* افکت زیبا */
-.product button:hover {
-    background: #ff9900;
-}
-
-#contact {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 40px 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
-
-#contact h2 {
-    margin-bottom: 15px;
-    font-size: 26px;
-}
-
-#contact p {
-    font-size: 16px;
-    color: #444;
-}
-
-button {
-    background: var(--primary);
-    color: #000;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 15px;
-}
-
-button:hover {
-    background: var(--primary-hover);
-}
-
-/* نسخه موبایل */
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .hero {
-        padding: 40px 20px;
-    }
-
-    #products {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .product {
-        padding: 20px;
-    }
-
-    footer {
-        font-size: 13px;
-        padding: 18px;
-    }
-}
-
-.product {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-
-/* === FAQ Section === */
-.faq-section {
-    max-width: 800px;
-    margin: 80px auto;
-    padding: 0 20px;
-}
-
-.faq-section h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
-.faq-item {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-.faq-question {
-    width: 100%;
-    text-align: right;
-    padding: 15px;
-    font-size: 18px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    transition: 0.3s;
-}
-
-.faq-question:hover {
-    color: var(--main-color);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.4s ease;
-}
-
-.faq-answer p {
-    padding: 0 15px 15px;
-    font-size: 16px;
-    color: #555;
-}
-/* HEADER - Modern Sticky */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.55);
-    padding: 18px 0;
-    transition: 0.3s ease-in-out;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-
-header.scrolled {
-    background: rgba(0, 0, 0, 0.85);
-    padding: 10px 0;
-}
-/* HERO Modern */
-.hero {
-    background: linear-gradient(120deg, #111, #000);
-    padding: 120px 20px;
-    text-align: center;
-    border-radius: 20px;
-    margin: 20px;
-    color: #fff;
-    animation: fadeInUp 1s ease forwards;
-    backdrop-filter: blur(10px);
-}
-
-.hero h1 {
-    font-size: 42px;
-    font-weight: 800;
-    background: linear-gradient(90deg, #ffd700, #fff);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.hero p {
-    margin-top: 12px;
-    font-size: 18px;
-    opacity: 0.85;
-}
-
-.hero .btn {
-    margin-top: 25px;
-    padding: 12px 28px;
-    font-size: 17px;
     font-weight: 600;
-    background: #ffd700;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(120deg, var(--pink), var(--yellow));
+    color: #fff;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+.hero button {
+    background: #fff;
     color: #000;
+    padding: 10px 22px;
     border-radius: 10px;
-    transition: 0.3s;
+    font-weight: 700;
+    border: none;
+    margin-top: 20px;
 }
 
-.hero .btn:hover {
-    background: #f1c600;
-    transform: translateY(-3px);
+/* Products */
+.products {
+    padding: 40px 20px;
 }
 
-/* Animation */
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(25px); }
-    100% { opacity: 1; transform: translateY(0); }
+.product-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
-/* PRODUCT CARD - 3D Hover */
+
 .product-card {
-    background: #111;
-    border-radius: 15px;
+    background: #fff;
     padding: 20px;
-    transition: 0.25s ease-in-out;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(255, 79, 167, 0.2);
+    transition: 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(255, 79, 167, 0.4);
 }
 
-.product-card img {
-    border-radius: 12px;
+/* Fake image box */
+.product-card .img {
+    width: 100%;
+    height: 150px;
+    background: #ffd5ef;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
-.product-card h3 {
-    color: #ffd700;
-}
 /* FAQ */
+.faq {
+    padding: 40px 20px;
+}
+
 .faq-item {
-    background: #111;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    padding: 15px;
+    background: #fff;
+    padding: 18px;
+    margin-bottom: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: 0.3s;
-    border: 1px solid #333;
+    border: 2px solid transparent;
 }
 
 .faq-item.active {
-    border-color: #ffd700;
+    border-color: var(--pink);
 }
 
-.faq-item p {
-    margin-top: 10px;
+.faq-answer {
     display: none;
+    padding-top: 10px;
+    color: #444;
 }
 
-.faq-item.active p {
-    display: block;
-    animation: fade 0.35s ease;
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
 }
-
-@keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-.fade-section {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: 0.6s ease;
-}
-
-.fade-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* RESPONSIVE */
-@media(max-width: 768px) {
-    .hero h1 { font-size: 32px; }
-    .product-list { grid-template-columns: 1fr; }
-    header nav ul { gap: 12px; }
-    .hero { margin: 10px; padding: 80px 15px; }
-}
-
-
-
