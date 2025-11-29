@@ -1,123 +1,93 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>جورابونه | فروشگاه جوراب‌های فانتزی</title>
-    <link href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.0/Vazirmatn-font-face.css" rel="stylesheet">
-
-    <!-- اتصال فایل CSS -->
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-    <!-- هدر -->
-    <header>
+    <!-- Header -->
+    <header class="header">
         <div class="logo">🧦 جورابونه</div>
-        <h1>فروشگاه من</h1>
         <nav>
             <a href="#products">محصولات</a>
-            <a href="#features">ویژگی‌ها</a>
-            <a href="#contact">تماس با ما</a>
+            <a href="#faq">سوالات</a>
+            <a href="#contact">تماس</a>
         </nav>
     </header>
-   
-    <!-- بخش معرفی -->
-    <section id="hero">
-         <h1>به جورابونه خوش اومدی! 🧦✨</h1>
-        <p>اینجا دنیای جوراب‌های خوشگل، رنگی و فانتزیه! هر روز مدل‌های جدید 😍</p>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>به جورابونه خوش اومدی! ✨</h1>
+        <p>دنیای جوراب‌های خوشگل، رنگی، خاص و فانتزی اینجاست 😍</p>
+        <button>مشاهده محصولات</button>
     </section>
 
-    <!-- بخش محصولات -->
-    <section id="products">
-        <h2>محصولات</h2>
+    <!-- Products -->
+    <section id="products" class="products">
+        <h2>محصولات محبوب 🧦</h2>
 
-      <div class="product">
-    <img src="images/product1.jpg" alt="محصول ۱">
-    <h3>محصول شماره ۱</h3>
-    <p>توضیح کوتاه درباره محصول شماره ۱</p>
-    <button>خرید</button>
-</div>
+        <div class="product-grid">
 
-<div class="product">
-    <img src="images/product2.jpg" alt="محصول ۲">
-    <h3>محصول شماره ۲</h3>
-    <p>توضیح کوتاه درباره محصول شماره ۲</p>
-    <button>خرید</button>
-</div>
+            <div class="product-card">
+                <div class="img"></div>
+                <h3>جوراب فانتزی خرسی</h3>
+                <p>قیمت: 59,000 تومان</p>
+                <button>افزودن به سبد</button>
+            </div>
 
-<div class="product">
-    <img src="images/product3.jpg" alt="محصول ۳">
-    <h3>محصول شماره ۳</h3>
-    <p>توضیح کوتاه درباره محصول شماره ۳</p>
-    <button>خرید</button>
-</div>
+            <div class="product-card">
+                <div class="img"></div>
+                <h3>جوراب خندان رنگی</h3>
+                <p>قیمت: 49,000 تومان</p>
+                <button>افزودن به سبد</button>
+            </div>
 
-    </section>
-    <section class="faq-section">
-    <h2>سوالات پرتکرار</h2>
+            <div class="product-card">
+                <div class="img"></div>
+                <h3>جوراب راه‌راه زرد</h3>
+                <p>قیمت: 39,000 تومان</p>
+                <button>افزودن به سبد</button>
+            </div>
 
-    <div class="faq-item">
-        <button class="faq-question">آیا امکان مرجوعی محصول وجود دارد؟</button>
-        <div class="faq-answer">
-            <p>بله، تا ۷ روز پس از دریافت کالا می‌توانید در صورت وجود مشکل محصول را مرجوع کنید.</p>
         </div>
-    </div>
-
-    <div class="faq-item">
-        <button class="faq-question">ارسال چقدر زمان می‌برد؟</button>
-        <div class="faq-answer">
-            <p>معمولاً سفارش‌ها بین ۲ تا ۴ روز کاری به دست مشتری می‌رسد.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <button class="faq-question">آیا پرداخت آنلاین امن است؟</button>
-        <div class="faq-answer">
-            <p>بله، پرداخت از طریق درگاه پرداخت امن و معتبر انجام می‌شود.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <button class="faq-question">محصولات اورجینال هستند؟</button>
-        <div class="faq-answer">
-            <p>تمامی محصولات ما اصل و همراه با ضمانت اصالت کالا ارائه می‌شوند.</p>
-        </div>
-    </div>
-        <div class="products fade-section">
-
-</section>
-
-
-    <!-- ویژگی‌ها -->
-    <section id="features">
-        <h2>چرا ما؟</h2>
-        <ul>
-            <li>ارسال سریع</li>
-            <li>قیمت مناسب</li>
-            <li>پشتیبانی حرفه‌ای</li>
-        </ul>
     </section>
 
-    <!-- تماس -->
-    <section id="contact">
-        <h2>تماس با ما</h2>
-        <p>شماره تماس: 0912xxxxxxx</p>
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <h2>سوالات پرتکرار ❓</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">ارسال به چه شهرهایی دارید؟</div>
+            <div class="faq-answer">به تمام ایران ارسال داریم؛ با پست پیشتاز 🚚</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">زمان تحویل چقدره؟</div>
+            <div class="faq-answer">بین ۲ تا ۴ روز کاری</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">امکان بازگشت کالا دارم؟</div>
+            <div class="faq-answer">بله، تا ۴۸ ساعت در صورت باز نشدن بسته‌بندی</div>
+        </div>
+
     </section>
 
-    <!-- فوتر -->
-    <footer>
-        <p>تمام حقوق محفوظ است</p>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>تماس با ما 📞</h2>
+        <p>اینستاگرام: @joraboone</p>
+        <p>واتساپ: 0912-000-0000</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>تمام حقوق برای جورابونه محفوظ است © 2025</p>
     </footer>
 
-    <!-- اتصال فایل JS -->
     <script src="js/main.js"></script>
-
 </body>
 </html>
-
-
-
-
-
